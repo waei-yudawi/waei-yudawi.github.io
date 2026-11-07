@@ -2716,7 +2716,26 @@
                 pressBar.className = 'h-full transition-all duration-500 ' + (pVal < 30 ? 'bg-emerald-500' : pVal < 70 ? 'bg-amber-500' : 'bg-red-500');
             }
         };
+window.openScenarioEditModal = async function() {
+            const scenarios = getLocal(KEY_SCENARIOS, defaultPeerScenarios);
+            const current = scenarios[currentScenarioIdx];
+            if (!current) return;
+            const newTitle = prompt('تعديل نص موقف الرفض الحالي:', current.title);
+            if (newTitle === null) return;
+            if (newTitle.trim()) current.title = newTitle.trim();
 
+            const newGoodFeedback = prompt('تعديل التحليل النفسي للرد الواثق (البطل):', current.choices[2]?.feedback || '');
+            if (newGoodFeedback !== null && newGoodFeedback.trim() && current.choices[2]) {
+                current.choices[2].feedback = newGoodFeedback.trim();
+            }
+
+            scenarios[currentScenarioIdx] = current;
+            const ok = await saveLocalConfirmed(KEY_SCENARIOS, scenarios);
+            if (ok) {
+                renderScenario(currentScenarioIdx);
+                showToast('تم حفظ وتحديث سيناريو الرفض سحابياً ✓');
+            }
+        };
         window.nextScenario = function() { 
             const scenarios = getLocal(KEY_SCENARIOS, defaultPeerScenarios);
             currentScenarioIdx = (currentScenarioIdx + 1) % scenarios.length; 
