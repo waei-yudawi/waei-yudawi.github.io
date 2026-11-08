@@ -984,62 +984,6 @@
                 </div>  
             </div>  
   
-            <!-- الخط الزمني للتعافي السريري بعد الإقلاع (صورة / GIF / فيديو) -->
-            <section id="timelineHealingWidget" class="bento-card p-5 sm:p-7 space-y-5 border-emerald-200 bg-gradient-to-br from-white via-emerald-50/25 to-slate-50 relative overflow-hidden">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-emerald-100">
-                    <div>
-                        <span class="text-xs font-bold text-emerald-800 bg-emerald-100/80 px-3 py-1 rounded-full border border-emerald-200 font-cairo inline-flex items-center gap-1.5 shadow-xs">
-                            <i class="fa-solid fa-heart-pulse text-emerald-600 animate-pulse"></i> الخط الزمني للتجدد الحيوي بعد الإقلاع ⏱️
-                        </span>
-                        <h3 class="text-lg sm:text-2xl font-black text-slate-900 mt-2 font-cairo">
-                            ماذا يحدث داخل أعضاء جسمك دقيقة بدقيقة بعد آخر سيجارة / سحبة؟
-                        </h3>
-                        <p class="text-xs text-slate-600 font-plex mt-0.5">
-                            شاهد الأثر الفسيولوجي المباشر، العلامات المخبرية الدقيقة، ومحاكاة حية للأعضاء:
-                        </p>
-                    </div>
-                    <div id="timelineOwnerControlsContainer" class="hidden flex-wrap items-center gap-2 self-start"></div>
-                </div>
-
-                <!-- شريط المحطات الست -->
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2" id="healingMilestonesBar"></div>
-
-                <!-- المسرح التفاعلي الحي: يدعم الصور، GIF الطبي، والفيديو -->
-                <div class="p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-                    <div class="lg:col-span-5 relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-950 border border-slate-200 shadow-inner flex items-center justify-center group">
-                        <div id="timelineMediaFrame" class="w-full h-full flex items-center justify-center relative">
-                            <img id="timelineMediaImg" src="" alt="المسرح الحي للتعافي" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            <div id="timelineMediaVideoBox" class="w-full h-full hidden"></div>
-                            <div class="absolute bottom-2 right-2 px-2.5 py-1 rounded-lg bg-black/70 text-white font-cairo text-[10px] font-bold backdrop-blur-xs flex items-center gap-1.5 z-10">
-                                <span id="milestoneMediaTypeBadge" class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                                <span id="milestoneMediaLabel">محاكاة حية</span>
-                            </div>
-                        </div>
-                        <div id="timelineMediaUploadSlot" class="absolute top-2 left-2 z-20"></div>
-                    </div>
-
-                    <div class="lg:col-span-7 space-y-3.5">
-                        <div class="flex items-center justify-between pb-2 border-b border-slate-100">
-                            <div>
-                                <span class="text-[11px] font-black text-emerald-700 font-cairo bg-emerald-50 px-2.5 py-0.5 rounded-md inline-block" id="milestoneTargetOrgan">الجهاز المستهدف</span>
-                                <h4 class="text-base sm:text-xl font-black text-slate-900 font-cairo mt-1" id="milestoneTitle">عنوان المحطة</h4>
-                            </div>
-                            <span class="px-3 py-1.5 rounded-xl bg-slate-100 font-num font-black text-xs sm:text-sm text-slate-800 border border-slate-200" id="milestoneTimeBadge">20 دقيقة</span>
-                        </div>
-
-                        <p class="text-xs sm:text-sm text-slate-600 font-plex leading-relaxed" id="milestoneClinicalImpact"></p>
-
-                        <div class="p-3.5 bg-gradient-to-r from-emerald-50 to-white rounded-xl border border-emerald-200/80 flex items-start gap-2.5">
-                            <span class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5 text-xs"><i class="fa-solid fa-microscope"></i></span>
-                            <div class="text-xs font-plex">
-                                <strong class="font-cairo text-emerald-950 block">العلامة المخبرية والفسيولوجية المؤكدة:</strong>
-                                <span id="milestoneLabMarker" class="text-emerald-800 leading-normal"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <!-- أطلس الفحص التشريحي الملون -->
             <div class="bento-card p-6 space-y-4">  
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-brandGray-100">  
@@ -1105,6 +1049,62 @@
   
             </div>  
         </div>
+
+            <!-- الخط الزمني للتعافي السريري بعد الإقلاع (صورة / GIF / فيديو) -->
+            <section id="timelineHealingWidget" class="bento-card p-5 sm:p-7 space-y-5 border-emerald-200 bg-gradient-to-br from-white via-emerald-50/25 to-slate-50 relative overflow-hidden">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-emerald-100">
+                    <div>
+                        <span class="text-xs font-bold text-emerald-800 bg-emerald-100/80 px-3 py-1 rounded-full border border-emerald-200 font-cairo inline-flex items-center gap-1.5 shadow-xs">
+                            <i class="fa-solid fa-heart-pulse text-emerald-600 animate-pulse"></i> الخط الزمني للتجدد الحيوي بعد الإقلاع ⏱️
+                        </span>
+                        <h3 class="text-lg sm:text-2xl font-black text-slate-900 mt-2 font-cairo">
+                            ماذا يحدث داخل أعضاء جسمك دقيقة بدقيقة بعد آخر سيجارة / سحبة؟
+                        </h3>
+                        <p class="text-xs text-slate-600 font-plex mt-0.5">
+                            شاهد الأثر الفسيولوجي المباشر، العلامات المخبرية الدقيقة، ومحاكاة حية للأعضاء:
+                        </p>
+                    </div>
+                    <div id="timelineOwnerControlsContainer" class="hidden flex-wrap items-center gap-2 self-start"></div>
+                </div>
+
+                <!-- شريط المحطات الست -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2" id="healingMilestonesBar"></div>
+
+                <!-- المسرح التفاعلي الحي: يدعم الصور، GIF الطبي، والفيديو -->
+                <div class="p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                    <div class="lg:col-span-5 relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-950 border border-slate-200 shadow-inner flex items-center justify-center group">
+                        <div id="timelineMediaFrame" class="w-full h-full flex items-center justify-center relative">
+                            <img id="timelineMediaImg" src="" alt="المسرح الحي للتعافي" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div id="timelineMediaVideoBox" class="w-full h-full hidden"></div>
+                            <div class="absolute bottom-2 right-2 px-2.5 py-1 rounded-lg bg-black/70 text-white font-cairo text-[10px] font-bold backdrop-blur-xs flex items-center gap-1.5 z-10">
+                                <span id="milestoneMediaTypeBadge" class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                                <span id="milestoneMediaLabel">محاكاة حية</span>
+                            </div>
+                        </div>
+                        <div id="timelineMediaUploadSlot" class="absolute top-2 left-2 z-20"></div>
+                    </div>
+
+                    <div class="lg:col-span-7 space-y-3.5">
+                        <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+                            <div>
+                                <span class="text-[11px] font-black text-emerald-700 font-cairo bg-emerald-50 px-2.5 py-0.5 rounded-md inline-block" id="milestoneTargetOrgan">الجهاز المستهدف</span>
+                                <h4 class="text-base sm:text-xl font-black text-slate-900 font-cairo mt-1" id="milestoneTitle">عنوان المحطة</h4>
+                            </div>
+                            <span class="px-3 py-1.5 rounded-xl bg-slate-100 font-num font-black text-xs sm:text-sm text-slate-800 border border-slate-200" id="milestoneTimeBadge">20 دقيقة</span>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-slate-600 font-plex leading-relaxed" id="milestoneClinicalImpact"></p>
+
+                        <div class="p-3.5 bg-gradient-to-r from-emerald-50 to-white rounded-xl border border-emerald-200/80 flex items-start gap-2.5">
+                            <span class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5 text-xs"><i class="fa-solid fa-microscope"></i></span>
+                            <div class="text-xs font-plex">
+                                <strong class="font-cairo text-emerald-950 block">العلامة المخبرية والفسيولوجية المؤكدة:</strong>
+                                <span id="milestoneLabMarker" class="text-emerald-800 leading-normal"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 <!-- ==================== SCREEN 4: VIRTUAL INTERACTIVE LAB (CLEAR SMART POD VAPE SIMULATOR) ==================== -->  
         <div id="screen-lab" class="hidden space-y-6">  
