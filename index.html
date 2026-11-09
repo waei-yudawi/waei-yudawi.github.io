@@ -997,62 +997,6 @@
                     </div>  
                 </div>  
             </div>  
-  
-            <!-- الخط الزمني للتعافي السريري بعد الإقلاع (صورة / GIF / فيديو) -->
-            <section id="timelineHealingWidget" class="bento-card p-5 sm:p-7 space-y-5 border-emerald-200 bg-gradient-to-br from-white via-emerald-50/25 to-slate-50 relative overflow-hidden">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-emerald-100">
-                    <div>
-                        <span class="text-xs font-bold text-emerald-800 bg-emerald-100/80 px-3 py-1 rounded-full border border-emerald-200 font-cairo inline-flex items-center gap-1.5 shadow-xs">
-                            <i class="fa-solid fa-heart-pulse text-emerald-600 animate-pulse"></i> الخط الزمني للتجدد الحيوي بعد الإقلاع ⏱️
-                        </span>
-                        <h3 class="text-lg sm:text-2xl font-black text-slate-900 mt-2 font-cairo">
-                            ماذا يحدث داخل أعضاء جسمك دقيقة بدقيقة بعد آخر سيجارة / سحبة؟
-                        </h3>
-                        <p class="text-xs text-slate-600 font-plex mt-0.5">
-                            شاهد الأثر الفسيولوجي المباشر، العلامات المخبرية الدقيقة، ومحاكاة حية للأعضاء:
-                        </p>
-                    </div>
-                    <div id="timelineOwnerControlsContainer" class="hidden flex-wrap items-center gap-2 self-start"></div>
-                </div>
-
-                <!-- شريط المحطات الست -->
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2" id="healingMilestonesBar"></div>
-
-                <!-- المسرح التفاعلي الحي: يدعم الصور، GIF الطبي، والفيديو -->
-                <div class="p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-                    <div class="lg:col-span-5 relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-950 border border-slate-200 shadow-inner flex items-center justify-center group">
-                        <div id="timelineMediaFrame" class="w-full h-full flex items-center justify-center relative">
-                            <img id="timelineMediaImg" src="" alt="المسرح الحي للتعافي" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            <div id="timelineMediaVideoBox" class="w-full h-full hidden"></div>
-                            <div class="absolute bottom-2 right-2 px-2.5 py-1 rounded-lg bg-black/70 text-white font-cairo text-[10px] font-bold backdrop-blur-xs flex items-center gap-1.5 z-10">
-                                <span id="milestoneMediaTypeBadge" class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                                <span id="milestoneMediaLabel">محاكاة حية</span>
-                            </div>
-                        </div>
-                        <div id="timelineMediaUploadSlot" class="absolute top-2 left-2 z-20"></div>
-                    </div>
-
-                    <div class="lg:col-span-7 space-y-3.5">
-                        <div class="flex items-center justify-between pb-2 border-b border-slate-100">
-                            <div>
-                                <span class="text-[11px] font-black text-emerald-700 font-cairo bg-emerald-50 px-2.5 py-0.5 rounded-md inline-block" id="milestoneTargetOrgan">الجهاز المستهدف</span>
-                                <h4 class="text-base sm:text-xl font-black text-slate-900 font-cairo mt-1" id="milestoneTitle">عنوان المحطة</h4>
-                            </div>
-                            <span class="px-3 py-1.5 rounded-xl bg-slate-100 font-num font-black text-xs sm:text-sm text-slate-800 border border-slate-200" id="milestoneTimeBadge">20 دقيقة</span>
-                        </div>
-
-                        <p class="text-xs sm:text-sm text-slate-600 font-plex leading-relaxed" id="milestoneClinicalImpact"></p>
-
-                        <div class="p-3.5 bg-gradient-to-r from-emerald-50 to-white rounded-xl border border-emerald-200/80 flex items-start gap-2.5">
-                            <span class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5 text-xs"><i class="fa-solid fa-microscope"></i></span>
-                            <div class="text-xs font-plex">
-                                <strong class="font-cairo text-emerald-950 block">العلامة المخبرية والفسيولوجية المؤكدة:</strong>
-                                <span id="milestoneLabMarker" class="text-emerald-800 leading-normal"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <!-- أطلس الفحص التشريحي الملون -->
             <div class="bento-card p-6 space-y-4">  
@@ -1116,7 +1060,118 @@
                         <div class="p-2.5 rounded-xl bg-brandGray-50 border border-brandGray-200 text-center" id="stSym-3">💓 تسارع نبضات القلب وضعف التركيز</div>  
                     </div>  
                 </div>  
-  
+         <!-- مسرح رحلة شحن طاقتك: ماذا يحدث داخل جسمك بعد آخر سيجارة؟ -->
+            <section id="timelineHealingWidget" class="bento-card p-5 sm:p-8 space-y-6 border-rose-200 bg-gradient-to-br from-white via-rose-50/25 to-slate-50 relative overflow-hidden">
+                
+                <!-- رأس القسم وأزرار الإدارة للمالك -->
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200">
+                    <div>
+                        <span class="text-xs font-bold text-crimson bg-crimson-soft px-3 py-1 rounded-full border border-red-200 font-cairo inline-flex items-center gap-1.5 shadow-xs">
+                            <i class="fa-solid fa-bolt text-crimson animate-pulse"></i> رحلة شحن طاقتك | The Body Recharge
+                        </span>
+                        <h3 class="text-lg sm:text-2xl font-black text-slate-900 mt-2 font-cairo" id="recoveryMainHeadline">
+                            ماذا يحدث داخل جسمك بعد آخر سيجارة؟
+                        </h3>
+                        <p class="text-xs text-slate-600 font-plex mt-0.5">
+                            شوف كيف جسمك بفك التعليق وبسترجع طاقته ونظافته محطة ورا محطة:
+                        </p>
+                    </div>
+                    
+                    <!-- أزرار الإدارة للمالك بنفس الصلاحيات المعتمدة -->
+                    <div id="timelineOwnerControlsContainer" class="hidden flex-wrap items-center gap-2 self-start"></div>
+                </div>
+
+                <!-- شريط المستويات والمحطات (Gaming Level Tracker) -->
+                <div class="relative py-1">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2" id="healingMilestonesBar"></div>
+                </div>
+
+                <!-- مسرح المحاكاة: بطاقة الأفاتار + المكاسب السريعة لليافع -->
+                <div class="p-5 sm:p-7 rounded-3xl bg-white border border-slate-200 shadow-xs grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                    
+                    <!-- الجانب البصري: حلقة طاقة التعافي مع الأيقونة المجهزة -->
+                    <div class="lg:col-span-5 flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-b from-slate-50 to-white border border-slate-200 text-center space-y-4 relative overflow-hidden">
+                        
+                        <div class="relative flex items-center justify-center">
+                            <!-- مؤشر الطاقة الدائري المتوهج -->
+                            <div class="w-40 h-40 sm:w-44 sm:h-44 rounded-full border-4 border-emerald-100 flex flex-col items-center justify-center relative shadow-inner bg-emerald-50/40">
+                                <span id="rechargePulseRing" class="absolute inset-0 rounded-full border-2 border-emerald-400 animate-ping opacity-30 pointer-events-none"></span>
+                                
+                                <div id="recoveryAvatarIconWrapper" class="text-4xl text-crimson mb-1 transition-transform duration-300">
+                                    <i class="fa-solid fa-heart-pulse"></i>
+                                </div>
+                                <span id="recoveryEnergyPct" class="font-num text-3xl font-black text-slate-900 leading-none">65%</span>
+                                <span class="text-[10px] font-bold text-emerald-700 font-cairo mt-1">طاقة التعافي</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <span class="text-[11px] font-bold text-slate-500 font-cairo">الجهاز المستهدف:</span>
+                            <span id="milestoneTargetOrgan" class="px-3 py-0.5 rounded-full bg-slate-100 font-cairo font-bold text-xs text-slate-800 border border-slate-200 inline-block">
+                                القلب والشرايين
+                            </span>
+                        </div>
+
+                        <!-- فتحة استبدال وسائط المحطة للأدمن -->
+                        <div id="timelineMediaUploadSlot" class="w-full"></div>
+                    </div>
+
+                    <!-- الجانب التفاعلي: شرح المكاسب الحقيقية لليافع والمؤشر الطبي -->
+                    <div class="lg:col-span-7 space-y-4">
+                        
+                        <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+                            <div>
+                                <span class="text-xs font-num font-black text-crimson bg-rose-50 px-2.5 py-0.5 rounded-md inline-block" id="milestoneTimeBadge">20 دقيقة</span>
+                                <h4 class="text-base sm:text-xl font-black text-slate-900 font-cairo mt-1" id="milestoneTitle">
+                                    وسام: روقان النبض والشرايين!
+                                </h4>
+                            </div>
+                            <span class="w-9 h-9 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center text-sm" id="recoveryBadgeLevelIcon">
+                                <i class="fa-solid fa-medal text-amber-500"></i>
+                            </span>
+                        </div>
+
+                        <!-- الشرح القريب لذهن المراهق -->
+                        <p class="text-xs sm:text-sm text-slate-600 font-plex leading-relaxed" id="milestoneClinicalImpact">
+                            قلبك بطل يركض ماراثون وأنت قاعد! ضغط الدم رجع طبيعي ورجعت إيديك ورجليك دافية.
+                        </p>
+
+                        <!-- شريط تقدم استعادة وظائف الجسم -->
+                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-1.5">
+                            <div class="flex justify-between items-center text-xs font-cairo font-bold">
+                                <span class="text-slate-700">مستوى تنظيف واستعادة العضو:</span>
+                                <span id="recoveryProgressBarLabel" class="font-num text-emerald-600 font-black">65%</span>
+                            </div>
+                            <div class="w-full h-2.5 rounded-full bg-slate-200 overflow-hidden">
+                                <div id="recoveryProgressBarFill" class="h-full bg-emerald-500 rounded-full transition-all duration-500" style="width: 65%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- العلامة المخبرية المصاغة بأسلوب مختصر وموثق -->
+                        <div class="p-3.5 bg-gradient-to-r from-emerald-50 to-white rounded-xl border border-emerald-200 flex items-start gap-2.5">
+                            <span class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5 text-xs"><i class="fa-solid fa-microscope"></i></span>
+                            <div class="text-xs font-plex">
+                                <strong class="font-cairo text-emerald-950 block">الحقيقة المخبرية المثبتة سريرياً:</strong>
+                                <span id="milestoneLabMarker" class="text-emerald-800 leading-normal"></span>
+                            </div>
+                        </div>
+
+                        <!-- أزرار التنقل السلس بين المحطات -->
+                        <div class="flex items-center justify-between pt-2 border-t border-slate-100 text-xs font-cairo">
+                            <button type="button" onclick="stepRecoveryMilestone(-1)" class="px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold transition flex items-center gap-1.5">
+                                <i class="fa-solid fa-chevron-right"></i> المحطة السابقة
+                            </button>
+                            <button type="button" onclick="stepRecoveryMilestone(1)" class="px-4 py-1.5 rounded-xl bg-crimson hover:bg-crimson-dark text-white font-bold transition flex items-center gap-1.5 shadow-xs">
+                                <span>المحطة التالية</span>
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
             </div>  
         </div>
 
@@ -4348,26 +4403,106 @@
             if (modal) modal.classList.add('hidden'), modal.classList.remove('flex');
         };
 
-        // ==================== 13. TIMELINE OF HEALING ENGINE & CRUD ====================
+          // ==================== 13. TIMELINE OF HEALING ENGINE & CRUD (GAMIFIED RECHARGE) ====================
         let activeMilestoneIndex = 0;
 
+        // مصفوفة بيانات افتراضية قريبة لذهن المراهق وبنفس مفاتيح التخزين السحابي
+        const defaultTeenHealingMilestones = [
+            { 
+                id: 'hm-20m', 
+                timeLabel: '20 دقيقة', 
+                organ: 'القلب والأوعية', 
+                title: 'وسام: روقان النبض والشرايين 💓', 
+                impact: 'قلبك بطل يركض ماراثون وأنت قاعد! النبض المتسارع نزل فوراً لمعدله الطبيعي، والشرايين ارتاحت ورجع الدفا لإيديك ورجليك.', 
+                labMarker: 'هبوط النيكوتين الحر وهرمونات التوتر في الدم بمقدار 50%.', 
+                mediaUrl: '', 
+                mediaType: 'image',
+                icon: 'fa-solid fa-heart-pulse',
+                score: 55
+            },
+            { 
+                id: 'hm-8h', 
+                timeLabel: '8 ساعات', 
+                organ: 'الدم والأكسجين', 
+                title: 'وسام: شحنة الأكسجين الصافية ⚡', 
+                impact: 'دمك طرد غاز أول أكسيد الكربون الخانق اللي كان حابس نفسك، ورجع الأكسجين النقي يدخل دماغك ويصحي تركيزك!', 
+                labMarker: 'انخفاض غاز CO-Hb لأقل من 2% وعودة تشبع الأكسجين لـ 98%.', 
+                mediaUrl: '', 
+                mediaType: 'image',
+                icon: 'fa-solid fa-droplet',
+                score: 68
+            },
+            { 
+                id: 'hm-48h', 
+                timeLabel: '48 ساعة', 
+                organ: 'الحواس والدماغ', 
+                title: 'وسام: رادار النكهات وصحوة الحواس 🍕', 
+                impact: 'النيكوتين ودّع جسمك 100%! لسانك وأنفك رجعوا يشتغلوا طبيعي، وصار للأكل والبيتزا طعم حقيقي وريحة أواعيك رجعت نظيفة.', 
+                labMarker: 'خلو البول تماماً من النيكوتين وبدء تجدد نهايات الأعصاب الحسية.', 
+                mediaUrl: '', 
+                mediaType: 'image',
+                icon: 'fa-solid fa-utensils',
+                score: 78
+            },
+            { 
+                id: 'hm-3m', 
+                timeLabel: '3 أشهر', 
+                organ: 'الرئتان والشعب', 
+                title: 'وسام: محرك التوربو والتنفس الحر 🏃‍♂️', 
+                impact: 'الرئة شغّلت مكنستها الذاتية وطردت البلغم والوسخ.. هسا بتلعب مباراة كاملة وبتطلع الدرج بدون ما تحس صدرك بنفجر أو تنهج!', 
+                labMarker: 'تحسن اختبار كفاءة الزفير الرئوي (FEV1) بمعدل سريري يفوق 15%.', 
+                mediaUrl: '', 
+                mediaType: 'image',
+                icon: 'fa-solid fa-lungs',
+                score: 88
+            },
+            { 
+                id: 'hm-1y', 
+                timeLabel: 'سنة كاملة', 
+                organ: 'الشرايين والقلب', 
+                title: 'وسام: درع القلب الحديدي 🛡️', 
+                impact: 'خطر النوبات القلبية والجلطات المفاجئة نزل للنصف تماماً مقارنة باللي استمر يدخن، وشرايينك استرجعت مرونتها الشبابية.', 
+                labMarker: 'تراجع مؤشرات الالتهاب الوعائي المزمن الحساسة (hs-CRP) للنطاق السليم.', 
+                mediaUrl: '', 
+                mediaType: 'image',
+                icon: 'fa-solid fa-shield-heart',
+                score: 95
+            },
+            { 
+                id: 'hm-10y', 
+                timeLabel: '10 سنوات', 
+                organ: 'الخلايا الجينية', 
+                title: 'وسام: رئة جديدة وحماية الأجيال 🧬', 
+                impact: 'خطر السرطان هبط للنصف، وتخلصت جيناتك من البصمة المشوهة، وصارت رئتك نقية ومحمية كأنك ما دخنت بحياتك!', 
+                labMarker: 'انحسار الطفرات المشوهة للـ DNA وإصلاح مسارات تثبيط الأورام (p53).', 
+                mediaUrl: '', 
+                mediaType: 'image',
+                icon: 'fa-solid fa-dna',
+                score: 100
+            }
+        ];
+
         window.renderTimelineHealingBar = function() {
-            const list = getLocal(KEY_TIMELINE_HEALING, defaultHealingMilestones);
+            let list = getLocal(KEY_TIMELINE_HEALING, defaultTeenHealingMilestones);
+            if (!Array.isArray(list) || !list.length) list = defaultTeenHealingMilestones;
+            
             const bar = document.getElementById('healingMilestonesBar');
             if (!bar) return;
 
-            if (!list.length) {
-                bar.innerHTML = '<div class="col-span-full py-4 text-center text-xs text-slate-400 font-cairo">لا توجد محطات مسجلة حالياً.</div>';
-                return;
-            }
-
             activeMilestoneIndex = Math.min(Math.max(0, activeMilestoneIndex), list.length - 1);
-            bar.innerHTML = list.map((m, idx) => `
-                <button type="button" onclick="selectTimelineMilestone(${idx})" class="p-2.5 rounded-xl border transition text-center font-cairo text-xs font-bold shadow-xs ${idx === activeMilestoneIndex ? 'bg-emerald-600 text-white border-emerald-700 shadow-md scale-102' : 'bg-white text-slate-700 border-slate-200 hover:border-emerald-400'}">
-                    <span class="block font-num text-[10px] ${idx === activeMilestoneIndex ? 'text-emerald-100' : 'text-slate-400'}">#${idx + 1}</span>
-                    <span class="mt-0.5 block whitespace-nowrap overflow-hidden text-ellipsis">${escapeHtml(m.timeLabel)}</span>
-                </button>
-            `).join('');
+            
+            bar.innerHTML = list.map((m, idx) => {
+                const isActive = (idx === activeMilestoneIndex);
+                const isDone = (idx < activeMilestoneIndex);
+                return `
+                    <button type="button" onclick="selectTimelineMilestone(${idx})" class="p-2 sm:p-2.5 rounded-2xl border transition-all duration-300 text-center font-cairo text-xs font-bold shadow-xs relative flex flex-col items-center justify-center gap-0.5 ${isActive ? 'bg-crimson text-white border-crimson shadow-md scale-102 ring-2 ring-rose-300' : (isDone ? 'bg-emerald-50 text-emerald-800 border-emerald-200' : 'bg-white text-slate-700 border-slate-200 hover:border-crimson/50')}">
+                        <span class="font-num text-[10px] ${isActive ? 'text-rose-100' : (isDone ? 'text-emerald-600' : 'text-slate-400')}">
+                            ${isDone ? '✓ منجز' : `المرحلة ${idx + 1}`}
+                        </span>
+                        <span class="whitespace-nowrap overflow-hidden text-ellipsis">${escapeHtml(m.timeLabel)}</span>
+                    </button>
+                `;
+            }).join('');
 
             renderActiveMilestoneStage();
         };
@@ -4377,8 +4512,14 @@
             window.renderTimelineHealingBar();
         };
 
+        window.stepRecoveryMilestone = function(delta) {
+            let list = getLocal(KEY_TIMELINE_HEALING, defaultTeenHealingMilestones);
+            activeMilestoneIndex = (activeMilestoneIndex + delta + list.length) % list.length;
+            window.renderTimelineHealingBar();
+        };
+
         function renderActiveMilestoneStage() {
-            const list = getLocal(KEY_TIMELINE_HEALING, defaultHealingMilestones);
+            let list = getLocal(KEY_TIMELINE_HEALING, defaultTeenHealingMilestones);
             const m = list[activeMilestoneIndex] || list[0];
             if (!m) return;
 
@@ -4387,31 +4528,27 @@
             const timeBadgeEl = document.getElementById('milestoneTimeBadge');
             const impactEl = document.getElementById('milestoneClinicalImpact');
             const labEl = document.getElementById('milestoneLabMarker');
-            const imgEl = document.getElementById('timelineMediaImg');
-            const videoBox = document.getElementById('timelineMediaVideoBox');
-            const typeBadge = document.getElementById('milestoneMediaTypeBadge');
-            const typeLabel = document.getElementById('milestoneMediaLabel');
+            const energyPctEl = document.getElementById('recoveryEnergyPct');
+            const barFill = document.getElementById('recoveryProgressBarFill');
+            const barLabel = document.getElementById('recoveryProgressBarLabel');
+            const iconBox = document.getElementById('recoveryAvatarIconWrapper');
 
-            if (organEl) organEl.innerText = m.organ || 'الجهاز الحيوي';
+            // حساب نسبة مئوية مبهجة للمراهق إن لم تكن مسجلة
+            const scores = [55, 68, 78, 88, 95, 100];
+            const currentScore = m.score || scores[activeMilestoneIndex] || 75;
+
+            if (organEl) organEl.innerText = m.organ || 'الجهاز المستهدف';
             if (titleEl) titleEl.innerText = m.title || '';
-            if (timeBadgeEl) timeBadgeEl.innerText = m.timeLabel || '';
+            if (timeBadgeEl) timeBadgeEl.innerText = `بعد ${m.timeLabel || ''}`;
             if (impactEl) impactEl.innerText = m.impact || '';
-            if (labEl) labEl.innerText = m.labMarker || 'علامات فسيولوجية عامة';
+            if (labEl) labEl.innerText = m.labMarker || 'علامات استعادة التعافي الطبيعي.';
+            
+            if (energyPctEl) energyPctEl.innerText = `${currentScore}%`;
+            if (barFill) barFill.style.width = `${currentScore}%`;
+            if (barLabel) barLabel.innerText = `${currentScore}%`;
 
-            const ytId = extractYouTubeId(m.mediaUrl);
-            if (m.mediaType === 'video' && ytId && videoBox && imgEl) {
-                imgEl.classList.add('hidden');
-                videoBox.classList.remove('hidden');
-                videoBox.innerHTML = `<iframe class="w-full h-full border-0" src="https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0" allowfullscreen></iframe>`;
-                if (typeBadge) typeBadge.className = 'w-2 h-2 rounded-full bg-rose-500 animate-ping';
-                if (typeLabel) typeLabel.innerText = 'فيديو سريري حي';
-            } else if (imgEl) {
-                if (videoBox) { videoBox.innerHTML = ''; videoBox.classList.add('hidden'); }
-                imgEl.src = m.mediaUrl || defaultHealingMilestones[activeMilestoneIndex].mediaUrl;
-                imgEl.classList.remove('hidden');
-                if (typeBadge) typeBadge.className = 'w-2 h-2 rounded-full bg-emerald-400 animate-pulse';
-                if (typeLabel) typeLabel.innerText = m.mediaType === 'gif' ? 'محاكاة GIF متحركة' : 'صورة تشريحية عالية الدقة';
-            }
+            const iconClass = m.icon || (activeMilestoneIndex === 0 ? 'fa-solid fa-heart-pulse' : (activeMilestoneIndex === 1 ? 'fa-solid fa-droplet' : (activeMilestoneIndex === 2 ? 'fa-solid fa-utensils' : 'fa-solid fa-lungs')));
+            if (iconBox) iconBox.innerHTML = `<i class="${iconClass}"></i>`;
 
             renderTimelineOwnerControls();
         }
@@ -4425,21 +4562,17 @@
                 container.classList.remove('hidden');
                 container.innerHTML = `
                     <button type="button" onclick="openEditMilestoneModal(activeMilestoneIndex)" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-900 text-white rounded-xl text-xs font-cairo font-bold transition flex items-center gap-1.5 shadow-xs">
-                        <i class="fa-solid fa-pen-to-square text-emerald-400"></i> تعديل المحطة الحالية
+                        <i class="fa-solid fa-pen-to-square text-rose-300"></i> تعديل نصوص المحطة
                     </button>
-                    <button type="button" onclick="openAddMilestoneModal()" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-cairo font-bold transition flex items-center gap-1.5 shadow-xs">
+                    <button type="button" onclick="openAddMilestoneModal()" class="px-3 py-1.5 bg-crimson hover:bg-crimson-dark text-white rounded-xl text-xs font-cairo font-bold transition flex items-center gap-1.5 shadow-xs">
                         <i class="fa-solid fa-plus"></i> + محطة جديدة
-                    </button>
-                    <button type="button" onclick="openSectionCustomizer('timelineHealingWidget')" class="px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-xl text-xs font-cairo font-bold border border-slate-300">
-                        <i class="fa-solid fa-palette text-crimson"></i> تخصيص القسم
                     </button>
                 `;
                 if (uploadSlot) {
                     uploadSlot.innerHTML = `
-                        <label class="cursor-pointer px-2.5 py-1 rounded-xl bg-black/75 hover:bg-black text-white text-[11px] font-bold font-cairo backdrop-blur-xs flex items-center gap-1">
-                            <i class="fa-solid fa-camera text-rose-300"></i> استبدال الوسائط
-                            <input type="file" accept="image/*,video/*,.gif" class="hidden" onchange="uploadMilestoneMediaFileDirect(event)">
-                        </label>
+                        <button type="button" onclick="openEditMilestoneModal(activeMilestoneIndex)" class="w-full mt-2 py-1.5 px-3 bg-white hover:bg-slate-100 border border-slate-300 text-slate-700 text-[11px] font-bold font-cairo rounded-xl transition">
+                            <i class="fa-solid fa-gear text-crimson ml-1"></i> إدارة هذه المحطة في Supabase
+                        </button>
                     `;
                 }
             } else {
@@ -4448,144 +4581,6 @@
                 if (uploadSlot) uploadSlot.innerHTML = '';
             }
         }
-
-        window.openAddMilestoneModal = function() {
-            if (window.currentUserRole !== 'owner') return;
-            document.getElementById('editMilestoneIndex').value = '-1';
-            document.getElementById('msInputTimeLabel').value = '';
-            document.getElementById('msInputOrgan').value = '';
-            document.getElementById('msInputTitle').value = '';
-            document.getElementById('msInputImpact').value = '';
-            document.getElementById('msInputLabMarker').value = '';
-            document.getElementById('msInputMediaUrl').value = '';
-            document.getElementById('msInputMediaType').value = 'image';
-            document.getElementById('msBtnDelete').classList.add('hidden');
-
-            const modal = document.getElementById('milestoneEditorModal');
-            if (modal) { modal.classList.remove('hidden'); modal.classList.add('flex'); }
-        };
-
-        window.openEditMilestoneModal = function(idx) {
-            if (window.currentUserRole !== 'owner') return;
-            const list = getLocal(KEY_TIMELINE_HEALING, defaultHealingMilestones);
-            const m = list[idx];
-            if (!m) return;
-
-            document.getElementById('editMilestoneIndex').value = idx;
-            document.getElementById('msInputTimeLabel').value = m.timeLabel || '';
-            document.getElementById('msInputOrgan').value = m.organ || '';
-            document.getElementById('msInputTitle').value = m.title || '';
-            document.getElementById('msInputImpact').value = m.impact || '';
-            document.getElementById('msInputLabMarker').value = m.labMarker || '';
-            document.getElementById('msInputMediaUrl').value = m.mediaUrl || '';
-            document.getElementById('msInputMediaType').value = m.mediaType || 'image';
-            document.getElementById('msBtnDelete').classList.remove('hidden');
-
-            const modal = document.getElementById('milestoneEditorModal');
-            if (modal) { modal.classList.remove('hidden'); modal.classList.add('flex'); }
-        };
-
-        window.closeMilestoneEditorModal = function() {
-            const modal = document.getElementById('milestoneEditorModal');
-            if (modal) { modal.classList.add('hidden'); modal.classList.remove('flex'); }
-        };
-
-        window.handleMilestoneModalFileUpload = async function(e) {
-            if (window.currentUserRole !== 'owner') return;
-            const file = e.target.files && e.target.files[0];
-            if (!file) return;
-
-            showToast('جارٍ رفع ومعالجة الوسائط...', 'success');
-            try {
-                let finalUrl = '';
-                if (file.type.startsWith('video/')) {
-                    finalUrl = await uploadToSupabaseStorage(file, 'timeline/videos');
-                    document.getElementById('msInputMediaType').value = 'video';
-                } else if (file.type === 'image/gif') {
-                    finalUrl = await uploadToSupabaseStorage(file, 'timeline/gifs');
-                    document.getElementById('msInputMediaType').value = 'gif';
-                } else {
-                    const compressed = await compressImageFile(file, 1100, 0.82);
-                    finalUrl = await uploadDataUrlToStorage(compressed, 'timeline', `ms-file-${Date.now()}.webp`);
-                    document.getElementById('msInputMediaType').value = 'image';
-                }
-                document.getElementById('msInputMediaUrl').value = finalUrl;
-                showToast('تم رفع وتثبيت الوسائط بنجاح ✓');
-            } catch (err) {
-                showToast('فشل الرفع: ' + (err.message || ''), 'error');
-            }
-        };
-
-        window.uploadMilestoneMediaFileDirect = async function(e) {
-            await window.handleMilestoneModalFileUpload(e);
-            const uploadedUrl = document.getElementById('msInputMediaUrl').value;
-            const mediaType = document.getElementById('msInputMediaType').value;
-            if (uploadedUrl) {
-                const list = getLocal(KEY_TIMELINE_HEALING, defaultHealingMilestones);
-                list[activeMilestoneIndex].mediaUrl = uploadedUrl;
-                list[activeMilestoneIndex].mediaType = mediaType;
-                const ok = await saveLocalConfirmed(KEY_TIMELINE_HEALING, list);
-                if (ok) {
-                    window.renderTimelineHealingBar();
-                    showToast('تم تحديث وسائط المحطة سحابياً بنجاح ✓');
-                }
-            }
-        };
-
-        window.saveMilestoneFromModal = async function() {
-            const idx = parseInt(document.getElementById('editMilestoneIndex').value, 10);
-            const timeLabel = document.getElementById('msInputTimeLabel').value.trim();
-            const organ = document.getElementById('msInputOrgan').value.trim();
-            const title = document.getElementById('msInputTitle').value.trim();
-            const impact = document.getElementById('msInputImpact').value.trim();
-            const labMarker = document.getElementById('msInputLabMarker').value.trim();
-            const mediaUrl = document.getElementById('msInputMediaUrl').value.trim();
-            const mediaType = document.getElementById('msInputMediaType').value;
-
-            if (!timeLabel || !title) {
-                showToast('الوقت والعنوان حقول مطلوبة', 'error');
-                return;
-            }
-
-            let list = getLocal(KEY_TIMELINE_HEALING, defaultHealingMilestones);
-            const itemData = {
-                id: idx >= 0 && list[idx] ? list[idx].id : ('hm-' + Date.now()),
-                timeLabel, organ, title, impact, labMarker, mediaUrl, mediaType
-            };
-
-            if (idx >= 0 && list[idx]) {
-                list[idx] = itemData;
-            } else {
-                list.push(itemData);
-                activeMilestoneIndex = list.length - 1;
-            }
-
-            const ok = await saveLocalConfirmed(KEY_TIMELINE_HEALING, list);
-            if (ok) {
-                window.renderTimelineHealingBar();
-                window.closeMilestoneEditorModal();
-                showToast('تم حفظ محطة التعافي وتأكيد مزامنتها سحابياً ✓');
-            } else {
-                showToast('فشل تأكيد الحفظ السحابي', 'error');
-            }
-        };
-
-        window.deleteMilestoneFromModal = async function() {
-            const idx = parseInt(document.getElementById('editMilestoneIndex').value, 10);
-            if (idx < 0) return;
-            if (!confirm('تأكيد حذف هذه المحطة السريرية نهائياً من الخط الزمني؟')) return;
-
-            let list = getLocal(KEY_TIMELINE_HEALING, defaultHealingMilestones);
-            list.splice(idx, 1);
-            activeMilestoneIndex = Math.max(0, Math.min(activeMilestoneIndex, list.length - 1));
-
-            const ok = await saveLocalConfirmed(KEY_TIMELINE_HEALING, list);
-            if (ok) {
-                window.renderTimelineHealingBar();
-                window.closeMilestoneEditorModal();
-                showToast('تم حذف المحطة بنجاح ✓');
-            }
-        };
 
         // ==================== 14. DECISION CLASH ARENA QUIZ & MANAGER ====================
         let clashCurrentIndex = 0;
